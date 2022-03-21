@@ -9,7 +9,7 @@ public class Main {
         int numType = 0;
         int fileVolume = 0;
         String[] input = null;
-        Component fileSys = new Composite();
+        Component fileSys = new Directory();
         Component folder = null;
 
 
@@ -50,10 +50,10 @@ public class Main {
                 case 3: {
                     if (folder != null) {
                         fileSys.add(folder);
-                        folder = new Composite();
+                        folder = new Directory();
                         fileSys.getInfo();
                     } else {
-                        folder = new Composite();
+                        folder = new Directory();
 
                     }
                     System.out.println("\nСоздана новая папка\n");
@@ -135,7 +135,7 @@ class MultimediaFile extends Component {
     }
 }
 
-class Composite extends Component {
+class Directory extends Component {
     public List<Component> components = new ArrayList<>();
 
     @Override
